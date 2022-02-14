@@ -8,7 +8,7 @@ Just take look at KEYWORD.txt for more informations on code and circuit.
 
 ## Schematic:
 
-![img](image/README/1644830103691.png)
+![img](doc/schematic.png)
 
 ## Arduino example sketch:
 
@@ -59,4 +59,4 @@ void loop()
 
 ## Calculations:
 
-![img](image/README/1644830989931.png)
+![img](doc/calculations.png)
