@@ -1,0 +1,39 @@
+KEYWORDS FOR Windspeed LIBRARY:
+###################################################################################################################################################################
+
+INITIALISATION:
+
+anemometer Wind(Signal Pin (2), radius of the anemometer in meter (0.05), number of counter elements/reed switches (1));
+
+Notes:
+All values, despite the radius value, are integer values!
+The radius is measured from the center of the anemometer to the middle of one of the leafs.
+
+
+###################################################################################################################################################################
+
+GET WINDSPEED VALUES:
+
+Wind.getWindspeedkmh();        returns the Windspeed in km/h
+Wind.getWindspeedMs();         returns the Windspeed in m/s
+Wind.getWindspeedFromMs();     returns the Windspeed in km/h but on base of the values form Wind.getWindspeedMs()
+Wind.getRPM();                 returns the expected rotations per minute
+Wind.getCounts();              returns the number of turns in the set intervall
+Wind.setIntervall();           You can set an intervall in ms for measuring e.g. counting the revoltiuons in an intervall of 5 seconds and then calculating the speed
+Wind.writeCounts();            You can give the library the number of revolutions/intervall externally and therefore not using the internal acqusation mode 
+                               NOTE: Wind.writeCounts(); does NOT work in the current state of development!
+
+###################################################################################################################################################################
+
+CIRCUIT:
+
+      Vcc
+       |
+       |                           /
+       ---------[ R ]-------|-----/    ---------            recommended values: 
+                            |     reed switch  |                                    R = 10k
+                            |                  |                                    Vcc = +3.3V DC - +5V DC
+                            |                 ---                                   I/O Pin = any Digital input Pin 
+                            |                 GND                                             for further options interrupt Pins can be required
+                            |
+                       Digital Pin
