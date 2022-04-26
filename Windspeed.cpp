@@ -1,6 +1,6 @@
 #include "Windspeed.h" //include header file
 
-anemometer::anemometer(unsigned int SignalPin, float Radius, unsigned int CounterElements) // define function of class NTC to initialize the NTC
+anemometer::anemometer(unsigned int SignalPin, float Radius, unsigned int CounterElements) // define function of class anemometer to initialize 
 {                                                                                          // function is used for initializing the object
     Pin = SignalPin;                                                                       // all the elements in brackets in the function get written to private variables
     radius = Radius;

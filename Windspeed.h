@@ -5,9 +5,9 @@
 #include "Arduino.h"
 
 
-class anemometer                                                                               //define a class named NTC
+class anemometer                                                                               //define a class named anemometer
 {
-private:                                                                                //private section of the class
+private:                                                                                       //private section of the class
     unsigned int Pin;                                                                          //variables for calculation are declared here
     float radius;
     unsigned int counterElements;
@@ -24,8 +24,8 @@ private:                                                                        
 
 
 
-public:                                                                                 //public section oft the class
-    anemometer(unsigned int SignalPin, float Radius, unsigned int CounterElements);                        //here are all the functions from this library defined
+public:                                                                                             //public section oft the class
+    anemometer(unsigned int SignalPin, float Radius, unsigned int CounterElements);                 //here are all the functions from this library defined
                                                                                         
     float getWindspeedKmh(); 
     float getWindspeedKmhFromMs(); 
